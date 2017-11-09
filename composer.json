@@ -1,0 +1,13 @@
+{
+    "autoload": {
+        "psr-4": {
+			"TaskManager\\": "app/class"
+		}
+    },
+    "require": {
+        "twig/twig": "^2.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "6.2"
+    }
+}
