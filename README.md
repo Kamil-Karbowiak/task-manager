@@ -1,23 +1,23 @@
-#Task Manager
+# Task Manager
 Simple to-do application for managing your daily tasks. This project is creating for learning purposes...
-##Project features:
-•	wirtten in PHP
-•	based on MVC pattern
-•	uses a MySQL database through PHP Data Object
-•	uses HTML, CSS and JavaScript (jQuery) in front end
-•	authentication uses PHP session mechanism
-•	uses TWIG template engine
-•	simple pagination system
-•	simple validation system
-•	CSRF protection
-•	uses Bootstrap
-•	unit tests
+## Project features:
+*	wirtten in PHP
+*	based on MVC pattern
+*	uses a MySQL database through PHP Data Object
+*	uses HTML, CSS and JavaScript (jQuery) in front end
+*	authentication uses PHP session mechanism
+*	uses TWIG template engine
+*	simple pagination system
+*	simple validation system
+*	CSRF protection
+*	uses Bootstrap
+*	unit tests
 
-##How to use:
+## How to use:
 1.	Clone repository
-2.	Run composer install
-3.	Set your database credentials in the app/config/config.php file
-4.	Database structure:
+1.	Run composer install
+1.	Set your database credentials in the app/config/config.php file
+1.	Database structure:
 
 CREATE TABLE `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
