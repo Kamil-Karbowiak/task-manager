@@ -1,6 +1,6 @@
 #Task Manager
 Simple to-do application for managing your daily tasks. This project is creating for learning purposes...
-Project features:
+##Project features:
 •	wirtten in PHP
 •	based on MVC pattern
 •	uses a MySQL database through PHP Data Object
@@ -13,7 +13,7 @@ Project features:
 •	uses Bootstrap
 •	unit tests
 
-How to use
+##How to use:
 1.	Clone repository
 2.	Run composer install
 3.	Set your database credentials in the app/config/config.php file
