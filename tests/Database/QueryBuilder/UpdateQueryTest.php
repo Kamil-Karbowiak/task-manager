@@ -2,7 +2,7 @@
 
 namespace Tests\Database\QueryBuilder;
 
-use Mvc2\Database\QueryBuilder\QueryBuilder;
+use TaskManager\Database\QueryBuilder\QueryBuilder;
 
 class UpdateQueryTest extends \PHPUnit\Framework\TestCase
 {

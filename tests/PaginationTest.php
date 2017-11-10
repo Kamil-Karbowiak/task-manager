@@ -2,8 +2,8 @@
 
 namespace Tests;
 
-use Mvc2\Pagination\ArrayAdapter;
-use Mvc2\Pagination\Pagination;
+use TaskManager\Pagination\ArrayAdapter;
+use TaskManager\Pagination\Pagination;
 
 class PaginationTest extends \PHPUnit\Framework\TestCase
 {

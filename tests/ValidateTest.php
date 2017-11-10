@@ -1,8 +1,8 @@
 <?php
 
-use Mvc2\temp\Input;
+use TaskManager\Validation\Input;
 use PHPUnit\Framework\TestCase;
-use Mvc2\temp\Validate;
+use TaskManager\Validation\Validate;
 
 class ValidateTest extends TestCase
 {
