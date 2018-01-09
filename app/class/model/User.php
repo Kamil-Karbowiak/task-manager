@@ -70,8 +70,8 @@ class User implements EntityInterface
     {
         $allVars = get_object_vars($this);
         $temp = [];
-        foreach (self::$columnsToFill as $column) {
-            if (array_key_exists($column, $allVars)) {
+        foreach(self::$columnsToFill as $column){
+            if(array_key_exists($column, $allVars)){
                 $temp[$column] = $allVars[$column];
             }
         }

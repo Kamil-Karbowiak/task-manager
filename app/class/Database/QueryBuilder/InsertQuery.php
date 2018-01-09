@@ -21,15 +21,15 @@ class InsertQuery extends AbstractQuery
 
     public function params($params = [])
     {
-        $params = array_keys($params);
+        $params  = array_keys($params);
         $columns = [];
-        $values = [];
+        $values  = [];
         foreach ($params as $param){
             $columns[] = $this->addQuotes($param);
-            $values[] = ":".$param;
+            $values[]  = ":".$param;
         }
         $this->columns = implode(', ', $columns);
-        $this->values = implode(', ', $values);
+        $this->values  = implode(', ', $values);
         return $this;
     }
 
@@ -40,10 +40,10 @@ class InsertQuery extends AbstractQuery
 
     private function prepareQuery()
     {
-        if (!$this->getTable() || !$this->getColumns() || !$this->getValues()) {
+        if(!$this->getTable() || !$this->getColumns() || !$this->getValues()){
             return false;
         }
-        $query = $this->queryType."INTO ".$this->getTable();
+        $query  = $this->queryType."INTO ".$this->getTable();
         $query .= " (".$this->getColumns().")";
         $query .= " VALUES (".$this->getValues().")";
         return $query;

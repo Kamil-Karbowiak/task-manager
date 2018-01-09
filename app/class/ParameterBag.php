@@ -1,5 +1,4 @@
 <?php
-
 namespace TaskManager;
 
 class ParameterBag implements ParameterBagInterface
@@ -40,7 +39,7 @@ class ParameterBag implements ParameterBagInterface
 
     public function delete($name)
     {
-        if (self::exists($name)) {
+        if(self::exists($name)){
             unset($this->data[$name]);
         }
     }

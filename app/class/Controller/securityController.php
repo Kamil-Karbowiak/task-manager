@@ -12,11 +12,11 @@ class SecurityController extends Controller
 	public function index()
     {
         $data = [];
-	    if ($this->request->getRequest()->exists('submit')) {
+	    if($this->request->getRequest()->exists('submit')){
             $email    = htmlspecialchars($_POST['email']);
 			$password = $_POST['password'];
 			$userRepo = new EntityRepository($this->db,'TaskManager\Model\User', 'users');
-            if (Login::login($userRepo, $email, $password)) {
+            if(Login::login($userRepo, $email, $password)){
                 Redirect::redirect('home/index');
             }else{
                 $data['errors'] = Login::getErrors();
@@ -29,12 +29,12 @@ class SecurityController extends Controller
 	public function register()
     {
         $data = [];
-        if ($this->request->getRequest()->exists('submit')) {
+        if($this->request->getRequest()->exists('submit')){
 			$email = htmlspecialchars($_POST['email']);
 			$username = htmlspecialchars($_POST['username']);
 			$password = $_POST['password'];
 			$userRepo = new EntityRepository($this->db, 'TaskManager\Model\User', 'users');
-            if (Register::register($userRepo, $email, $username, $password)) {
+            if(Register::register($userRepo, $email, $username, $password)){
                 $this->session->flashMessage("WELCOME! You Are Successfully Registered. You can now log in.");
                 Redirect::redirect('security/index');
             }else{

@@ -13,7 +13,7 @@ abstract class AbstractQuery
 
     protected function addQuotesToMany($strings)
     {
-        foreach ($strings as &$string) {
+        foreach($strings as &$string){
             $string = $this->addQuotes($string);
         }
         return $strings;
@@ -27,7 +27,7 @@ abstract class AbstractQuery
     protected function getParamsAndPlaceholdersPairsArray($params)
     {
         $params = array_keys($params);
-        foreach ($params as &$param) {
+        foreach($params as &$param){
             $param = $this->addQuotes($param)." = :".$param;
         }
         return $params;
@@ -35,7 +35,7 @@ abstract class AbstractQuery
 
     protected function generateColumnsString($columns)
     {
-        foreach ($columns as &$column) {
+        foreach($columns as &$column){
             $column = $this->addQuotes($column);
         }
         return implode(', ', $columns);

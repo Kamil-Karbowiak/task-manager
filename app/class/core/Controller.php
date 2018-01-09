@@ -15,10 +15,10 @@ abstract class Controller
 
     public function __construct()
     {
-        $this->session = new Session();
-        $this->request = new Request();
+        $this->session    = new Session();
+        $this->request    = new Request();
         $this->pagination = new Pagination();
-        $this->db = new Database();
+        $this->db         = new Database();
     }
 
     public function view($view, $data = [])

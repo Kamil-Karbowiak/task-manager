@@ -1,5 +1,4 @@
 <?php
-
 namespace TaskManager;
 
 class Session implements ParameterBagInterface

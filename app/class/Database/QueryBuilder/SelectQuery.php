@@ -10,17 +10,17 @@ class SelectQuery extends AbstractQuery
 
     public function __construct()
     {
-        $this->queryType = "SELECT ";
+        $this->queryType      = "SELECT ";
         $this->columnsToFetch = '*';
-        $this->table = '';
-        $this->conditions = '';
-        $this->order = '';
-        $this->limit = '';
+        $this->table          = '';
+        $this->conditions     = '';
+        $this->order          = '';
+        $this->limit          = '';
     }
 
     public function columnsToFetch(...$columns)
     {
-        if (!empty($columns)) {
+        if(!empty($columns)){
             $this->setColumns($columns);
         }
         return $this;
@@ -41,8 +41,8 @@ class SelectQuery extends AbstractQuery
     public function orderBy($columns, $order = 'ASC')
     {
         $sort = '';
-        if (is_array($columns)) {
-            foreach ($columns as &$column) {
+        if(is_array($columns)){
+            foreach($columns as &$column){
                 $column = $this->addQuotes($column);
             }
             $sort .= implode(', ', $columns);
@@ -74,16 +74,16 @@ class SelectQuery extends AbstractQuery
 
     private function prepareQuery()
     {
-        if (!$this->getColumns() || !$this->getTable()) {
+        if(!$this->getColumns() || !$this->getTable()){
             return false;
         }
-        $query = $this->queryType.$this->getColumns();
+        $query  = $this->queryType.$this->getColumns();
         $query .= " FROM ".$this->getTable();
         $query .= " WHERE ".$this->getConditions();
-        if ($this->getOrder()) {
+        if($this->getOrder()){
             $query .= " ORDER BY ".$this->getOrder();
         }
-        if ($this->getLimit()) {
+        if($this->getLimit()){
             $query .= " LIMIT ".$this->getLimit();
         }
         return $query;

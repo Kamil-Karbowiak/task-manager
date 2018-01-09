@@ -11,7 +11,7 @@ class Input
     {
         $this->name  = $name;
         $this->value = $value;
-        if ($requirements) {
+        if($requirements){
             $this->initRequirements($requirements);
         }
     }
@@ -32,8 +32,8 @@ class Input
     }
 
     private function initRequirements($requirements = []){
-       foreach ($requirements as $key => $value) {
+       foreach($requirements as $key => $value){
                 $this->requirements[] = new Requirement($key, $value);
-            }
+       }
     }
 }

@@ -18,11 +18,11 @@ class Database
 
     private function connect()
     {
-        try {
+        try{
             $this->pdo = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME.";charset=utf8", DB_USER, DB_PASS,
                 array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
                 ));
-        } catch (PDOException $e) {
+        }catch(PDOException $e){
             print "Database connection error: " . $e->getMessage() . "<br/>";
             die();
         }
@@ -39,7 +39,7 @@ class Database
 
     public function bindArrayValue($params = [])
     {
-        foreach ($params as $key => $value) {
+        foreach($params as $key => $value){
             $this->bind($key, $value);
         }
     }

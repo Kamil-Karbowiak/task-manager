@@ -37,7 +37,7 @@ class Validate
 
 	private function checkRequirements(Input $input)
     {
-        while ($requirement = $input->getRequirement()) {
+        while($requirement = $input->getRequirement()){
             $conditionName  = $requirement->getName();
             $conditionValue = $requirement->getRequire();
             if($conditionName == 'required' && $conditionValue == 'true' && !$input->getValue()){
@@ -132,7 +132,7 @@ class Validate
 
     private function getInputByName($name)
     {
-        foreach ($this->inputs as $input) {
+        foreach($this->inputs as $input){
             if($input->getName() == $name){
                 return $input;
             }

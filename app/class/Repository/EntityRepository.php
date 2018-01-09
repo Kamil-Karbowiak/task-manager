@@ -39,7 +39,7 @@ class EntityRepository implements EntityRepositoryInterface
 
     public function persist(EntityInterface $entity)
     {
-        if ($entity->getId()) {
+        if($entity->getId()){
             $this->db->update($entity);
         }else{
             $this->db->insert($entity);

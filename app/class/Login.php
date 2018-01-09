@@ -14,7 +14,7 @@ class Login
     {
         self::init($userRepo);
         $user = self::getUser($email);
-        if (!$user || !self::isPasswordCorrect($password, $user->getPasswordHash())) {
+        if(!$user || !self::isPasswordCorrect($password, $user->getPasswordHash())){
             self::$errors = ['The username and password you entered did not match our records. Please double-check and try again.'];
             return false;
         }

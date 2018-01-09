@@ -9,11 +9,11 @@ class UpdateQuery extends AbstractQuery
 
     public function __construct()
     {
-        $this->queryType = 'UPDATE ';
-        $this->table = '';
-        $this->params = '';
+        $this->queryType  = 'UPDATE ';
+        $this->table      = '';
+        $this->params     = '';
         $this->conditions = '';
-        $this->limit = '';
+        $this->limit      = '';
     }
 
     public function table($table)
@@ -48,13 +48,13 @@ class UpdateQuery extends AbstractQuery
 
     private function prepareQuery()
     {
-        if (!$this->getTable() || !$this->getParams() || !$this->getConditions()) {
+        if(!$this->getTable() || !$this->getParams() || !$this->getConditions()){
             return false;
         }
         $query  = $this->getTable();
         $query .= $this->getParams();
         $query .= $this->getConditions();
-        if ($this->getLimit()) {
+        if($this->getLimit()){
             $query .= $this->getLimit();
         }
         return $query;

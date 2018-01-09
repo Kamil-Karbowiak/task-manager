@@ -17,7 +17,7 @@ class CsrfGuard
 	{
         self::init();
 		$token = self::$session->get($unique_form_name);
-		if (!is_string($token_value)){
+		if(!is_string($token_value)){
 			return false;
 		}
 		$result = hash_equals($token, $token_value);

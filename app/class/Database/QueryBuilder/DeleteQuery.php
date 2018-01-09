@@ -39,12 +39,12 @@ class DeleteQuery extends AbstractQuery
 
     private function prepareQuery()
     {
-        if (!$this->getTable() || !$this->getConditions()) {
+        if(!$this->getTable() || !$this->getConditions()){
             return false;
         }
         $query = $this->queryType."FROM ".$this->getTable();
         $query .= " WHERE ".$this->getConditions();
-        if ($this->getLimit()) {
+        if($this->getLimit()){
             $query .= " LIMIT ".$this->limit;
         }
         return $query;

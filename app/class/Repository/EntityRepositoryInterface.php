@@ -1,5 +1,4 @@
 <?php
-
 namespace TaskManager\Repository;
 
 use TaskManager\Model\EntityInterface;
